@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+         <link src="KAZEcom_All::js/all.js"/>
+    </head>
+    <body>
+        <referenceContainer name="sidebar.additional">
+            <referenceBlock name="wishlist_sidebar" remove="true" />
+            <referenceBlock  name="catalog.compare.sidebar" remove="true" />
+            <block class="KAZEcom\All\Block\Document\Index" name="document_leftnav" template="KAZEcom_All::left/navigation.phtml" cacheable="false"/>
+        </referenceContainer>
+        <move element="page.main.title" destination="content.top" before="-"/>
+        <referenceContainer name="content">
+            <!--Nomal Block-->
+            <block class="KAZEcom\All\Block\Document\Index" name="document.content" before="-" template="KAZEcom_All::content/note.phtml" />
+        </referenceContainer>
+    </body>
+</page>
+
