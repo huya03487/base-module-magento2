@@ -3,25 +3,26 @@
   "description": "Magento 2 Base Module",
   "type": "magento2-module",
   "version": "1.0.0",
-  "license": "MIT",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://repo.magento.com/"
+  "license": [
+      "MIT",
+      "OSL-3.0",
+      "AFL-3.0"
+    ],
+  "require": {
+      "php": "~5.5|~5.6|~7.0",
+      "magento/magento-composer-installer": "*"
     },
-    {
-      "type": "vcs",
-      "url": "https://github.com/magento/marketplace-eqp"
-    }
-  ],
   "authors": [
     {
       "name": "Kevin David",
-      "email": "huya03487@gmail.com@gmail.com"
+      "email": "huya03487@gmail.com",
+      "role": "Developer"
     }
   ],
   "autoload": {
-    "files": [ "registration.php" ],
+    "files": [ 
+      "registration.php" 
+    ],
     "psr-4": {
       "KAZEcom\\All\\": ""
     }
