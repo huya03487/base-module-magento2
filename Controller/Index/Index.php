@@ -1,24 +1,30 @@
 <?php
-
 namespace KAZEcom\All\Controller\Index;
 
+/**
+ * Kevin E-commerce
+ *
+ * @api
+ * @SuppressWarnings(PHPMD.LongVariable)
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
+ * @since 100.0.2
+ */
 class Index extends \Magento\Framework\App\Action\Action
 {
-
     /**
-     * @param \Magento\Framework\App\Action\Context $context
-     */
+     * @var \Magento\Framework\View\Result\PageFactory
+    */
+    protected $resultPageFactory;
+
     public function __construct(
-        \Magento\Framework\App\Action\Context $context
-    ) {
+        \Magento\Framework\App\Action\Context $context,
+        \Magento\Framework\View\Result\PageFactory $resultPageFactory
+    )
+    {
+        $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
     }
 
-    /**
-     * Easy email capture for Newsletter and Checkout.
-     *
-     * @return mixed
-     */
     public function execute()
     {
         $this->_view->loadLayout();
